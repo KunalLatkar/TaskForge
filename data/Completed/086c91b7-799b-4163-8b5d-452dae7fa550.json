@@ -1,0 +1,15 @@
+{
+ "ID": "086c91b7-799b-4163-8b5d-452dae7fa550",
+ "Type": "report",
+ "Created": "2026-10-19T18:19:38.609915731+05:30",
+ "RetryCount": 0,
+ "Data": {
+  "name": "Big Report"
+ },
+ "StartedOn": "2026-10-19T18:19:38.610374479+05:30",
+ "EndedOn": "2026-10-19T18:19:43.61474681+05:30",
+ "Status": "Completed",
+ "Error": "",
+ "Result": "Repoted Successfully...",
+ "Priority": 0
+}

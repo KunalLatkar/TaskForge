@@ -7,7 +7,7 @@ import (
 )
 
 func TestQeueEnqueue(t *testing.T) {
-	q := queue.NewMemoryQueue(4)
+	q := queue.NewMemoryQueue(4, nil)
 
 	task := &task.Task{
 		ID:   "343-testing",

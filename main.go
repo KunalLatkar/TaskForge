@@ -8,13 +8,29 @@ import (
 	"os/signal"
 	"project/Internal/api"
 	"project/Internal/queue"
+	"project/Internal/storage"
 	"project/Internal/worker"
 	"syscall"
 	"time"
 )
 
 func main() {
-	q := queue.NewMemoryQueue(100)
+	fmt.Println("TaskForge - Distributed Task Queue System")
+
+	store, err := storage.NewFileStorage("./data")
+
+	if err != nil {
+		fmt.Printf("Failed to initialize storage: %v\n", err)
+		os.Exit(1)
+	}
+	fmt.Println("File storage initialized storage ./data")
+
+	q := queue.NewMemoryQueue(100, store)
+	fmt.Println("Queue is initialized (buffer: 100) ")
+
+	if err := q.LoadFromStorage(); err != nil {
+		fmt.Printf("Warning failed to load the tasks : %v\n", err)
+	}
 
 	ctx, cancel := context.WithCancel(context.Background())
 	numWorkers := 5

@@ -10,7 +10,7 @@ import (
 )
 
 func BenchmarkWorkerThoughput(b *testing.B) {
-	q := queue.NewMemoryQueue(200)
+	q := queue.NewMemoryQueue(200, nil)
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()

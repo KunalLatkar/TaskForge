@@ -73,13 +73,13 @@ func (w *Worker) executeTask(t *task.Task) (string, error) {
 	switch t.Type {
 	case "email":
 		time.Sleep(2 * time.Second)
-		return "Email sent:", nil
+		return "Email sent...", nil
 	case "resize_image":
 		time.Sleep(4 * time.Second)
-		return "Successfully resized the photo", nil
+		return "Successfully resized the photo...", nil
 	case "report":
 		time.Sleep(5 * time.Second)
-		return "Repoted Successfully", nil
+		return "Repoted Successfully...", nil
 	case "web Search":
 		time.Sleep(1 * time.Second)
 		return "Google pe ja....!", nil

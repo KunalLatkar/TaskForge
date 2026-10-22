@@ -1,0 +1,15 @@
+{
+ "ID": "21c1b375-37ef-45bc-a7aa-defe3eed5a96",
+ "Type": "web Search",
+ "Created": "2026-10-21T10:31:22.384649076+05:30",
+ "RetryCount": 0,
+ "Data": {
+  "month": "October"
+ },
+ "StartedOn": "2026-10-21T10:31:22.385285968+05:30",
+ "EndedOn": "2026-10-21T10:31:23.386271938+05:30",
+ "Status": "Completed",
+ "Error": "",
+ "Result": "Google pe ja....!",
+ "Priority": 3
+}

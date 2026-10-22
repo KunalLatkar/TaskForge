@@ -245,7 +245,7 @@ taskforge/
 │
 └── tests/                     # Test files (future)
     ├── queue_test.go
-    └──worker_test.go
+    └── worker_test.go
 
 ---
 
@@ -345,47 +345,4 @@ curl -X POST http://localhost:8080/task \
     },
     "priority": 3
   }'
-
----
-
-🐛 Troubleshooting
-
-Port Already in Use
-
-# Find process using port 8080
-lsof -i :8080
-
-# Kill the process
-kill -9 <PID>
-
-Workers Not Processing
-
-- Check if numWorkers > 0
-- Ensure queue buffer size > 0
-- Verify task type is supported
-
-Deadlock Detected
-
-- Make sure channels are properly closed
-- Check for goroutine leaks
-- Review context.Done() usage
-
----
-
-🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create a feature branch (git checkout -b feature/amazing-feature)
-3. Commit your changes (git commit -m 'Add amazing feature')
-4. Push to the branch (git push origin feature/amazing-feature)
-5. Open a Pull Request
-
----
-
-📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
+  ---

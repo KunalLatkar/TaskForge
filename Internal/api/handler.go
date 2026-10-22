@@ -2,7 +2,6 @@ package api
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"project/Internal/queue"
 	"project/Internal/task"
@@ -24,7 +23,6 @@ func NewServer(q queue.Queue) *Server {
 
 // POST Request
 func (s *Server) SubmitTask(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("inside the submit function")
 	var req struct {
 		Type     string                 `json: "type`
 		Data     map[string]interface{} `json: "data"`
@@ -45,7 +43,7 @@ func (s *Server) SubmitTask(w http.ResponseWriter, r *http.Request) {
 		Created:  time.Now(),
 	}
 
-	fmt.Println("GOT the json")
+	// fmt.Println("GOT the json")
 
 	if err := s.queue.Enqueue(t); err != nil {
 		http.Error(w, "Failed to queue the task", http.StatusInternalServerError)
